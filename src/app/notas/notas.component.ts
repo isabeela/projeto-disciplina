@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ManutencaoService } from '../manutencao.service';
 
 @Component({
   selector: 'app-notas',
@@ -7,23 +6,10 @@ import { ManutencaoService } from '../manutencao.service';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent implements OnInit {
-  p1: String;
-  p2: String;
-  id: number
 
-  constructor(public manutencaoService: ManutencaoService) {}
+  constructor() { }
 
-  ngOnInit() {}
-
-  handleClick() {
-   
-
-    this.manutencaoService.updateGrades(
-      this.p1,
-      this.p2,
-      this.id
-    )
-    this.p1 = '';
-    this.p2 = '';
+  ngOnInit() {
   }
+
 }

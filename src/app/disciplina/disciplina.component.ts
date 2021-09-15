@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ManutencaoService } from '../manutencao.service';
 
 @Component({
   selector: 'app-disciplina',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disciplina.component.css']
 })
 export class DisciplinaComponent implements OnInit {
+  inputWeekDay: String;
+  inputTime: String;
+  inputName: String;
 
-  constructor() { }
+  constructor(public manutencaoService: ManutencaoService) {}
 
-  ngOnInit() {
+  handleClick() {
+    this.manutencaoService.add(
+      this.inputWeekDay,
+      this.inputTime,
+      this.inputName
+    );
+    this.inputWeekDay = '';
+    this.inputTime = '';
+    this.inputName = '';
   }
 
+  ngOnInit() {}
 }

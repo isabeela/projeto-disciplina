@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
+import { NotasComponent } from './notas/notas.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { DisciplinaComponent } from './disciplina/disciplina.component';
     HelloComponent,
     HomeComponent,
     NavbarComponent,
-    DisciplinaComponent
+    DisciplinaComponent,
+    NotasComponent
   ],
   bootstrap: [AppComponent]
 })

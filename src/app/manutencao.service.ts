@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface Manutencao {
+interface Subjects {
   id: number;
   weekDay: String;
   time: String;
@@ -11,15 +11,15 @@ interface Manutencao {
 
 @Injectable()
 export class ManutencaoService {
-  private manutencaoList: Manutencao[] = [];
+  private schedulesList: Subjects[] = [];
 
   constructor() {}
 
   getList() {
     if (localStorage.getItem('list')) {
-      this.manutencaoList = JSON.parse(localStorage.getItem('list'));
+      this.schedulesList = JSON.parse(localStorage.getItem('list'));
     }
-    return this.manutencaoList;
+    return this.schedulesList;
   }
 
   add(inputWeekDay: String, inputTime: String, inputName: String) {
@@ -31,24 +31,24 @@ export class ManutencaoService {
       p1: '0',
       p2: '0'
     });
-    localStorage.setItem('list', JSON.stringify(this.manutencaoList));
+    localStorage.setItem('list', JSON.stringify(this.schedulesList));
   }
 
   updateGrades(inputP1: String, inputP2: String, id: number) {
-    this.manutencaoList[
-      this.manutencaoList.findIndex(e => e.id === +id)
+    this.schedulesList[
+      this.schedulesList.findIndex(e => e.id === +id)
     ].p1 = inputP1;
-    this.manutencaoList[
-      this.manutencaoList.findIndex(e => e.id === +id)
+    this.schedulesList[
+      this.schedulesList.findIndex(e => e.id === +id)
     ].p2 = inputP2;
-    localStorage.setItem('list', JSON.stringify(this.manutencaoList));
+    localStorage.setItem('list', JSON.stringify(this.schedulesList));
   }
 
   remove(id: number) {
-    this.manutencaoList.splice(
-      this.manutencaoList.findIndex(e => e.id === id),
+    this.schedulesList.splice(
+      this.schedulesList.findIndex(e => e.id === id),
       1
     );
-    localStorage.setItem('list', JSON.stringify(this.manutencaoList));
+    localStorage.setItem('list', JSON.stringify(this.schedulesList));
   }
 }

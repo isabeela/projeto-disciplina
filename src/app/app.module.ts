@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { NotasComponent } from './notas/notas.component';
+import { ManutencaoService } from './manutencao.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,6 +20,7 @@ import { NotasComponent } from './notas/notas.component';
     DisciplinaComponent,
     NotasComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ManutencaoService]
 })
 export class AppModule {}

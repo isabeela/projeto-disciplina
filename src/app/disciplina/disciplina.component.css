@@ -34,3 +34,11 @@ th {
 td {
   padding: 0 10px;
 }
+
+.remover {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: #fff;
+  font-weight: bolder;
+}

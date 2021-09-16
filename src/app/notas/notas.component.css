@@ -1,0 +1,64 @@
+section {
+  margin: 0 auto;
+  width: 80%;
+  padding: 50px 0;
+}
+
+div {
+  text-align: left;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+table {
+  border: 1px solid #e3e3e3;
+  margin: 30px 0;
+}
+
+tr {
+  padding: 10px;
+}
+
+th {
+  color: blue;
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+td {
+  padding: 0 10px;
+}
+
+.remover {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: #fff;
+  font-weight: bolder;
+  margin: 5px 0;
+}
+
+.add {
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  font-weight: bolder;
+}
+
+label {
+  margin: 5px;
+}
+
+input,
+select {
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px;
+}

@@ -18,7 +18,7 @@
     <label>
     Selecione uma disciplina:
     <select [(ngModel)]="id">
-    <option *ngFor="let item of manutencaoService.getList()" value={{item.id}}>{{item.name}}</option>
+    <option *ngFor="let item of manutencaoService.getList()" class="disc" value={{item.id}}>{{item.name}}</option>
   </select>
   </label>
     <label>

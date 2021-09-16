@@ -17,14 +17,16 @@
     <h2> Quadro de Horários </h2>
     <table>
       <tr>
+        <th> Disciplina</th>
         <th>Dia da semana</th>
         <th>Horário</th>
-        <th>Nome da disciplina</th>
+
       </tr>
       <tr *ngFor="let item of manutencaoService.getList()">
+        <td>{{item.name}}</td>
         <td>{{item.weekDay}}</td>
         <td>{{item.time}}</td>
-        <td>{{item.name}}</td>
+
       </tr>
     </table>
   </div>

@@ -16,6 +16,12 @@
     </tr>
   </table>
   <div class="form">
+
+    <label>
+    Disciplina:
+    <input type="text" [(ngModel)]="inputName" required>
+  </label>
+
     <label>
     Dia da semana:
 
@@ -34,10 +40,7 @@
     Horário:
     <input type="time" [(ngModel)]="inputTime" required>
   </label>
-    <label>
-    Nome:
-    <input type="text" [(ngModel)]="inputName" required>
-  </label>
+
     <input type="submit" value="+"  class="add" (click)="handleClick()">
   </div>
 </section>

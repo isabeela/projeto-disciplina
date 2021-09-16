@@ -41,6 +41,7 @@ td {
   background-color: red;
   color: #fff;
   font-weight: bolder;
+  margin: 5px 0;
 }
 
 .add {
@@ -53,4 +54,9 @@ td {
 
 label {
   margin: 5px;
+}
+
+input,
+select {
+  border-radius: 5px;
 }

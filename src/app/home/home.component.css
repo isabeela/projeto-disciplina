@@ -23,5 +23,9 @@ table {
 
  tr {
   padding: 10px;
-  
+}
+
+th {
+  color: blue;
+  padding: 0 10px;
 }

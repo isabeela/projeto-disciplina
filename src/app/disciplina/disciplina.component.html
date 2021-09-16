@@ -1,20 +1,22 @@
 <section>
-<h1>Disciplinas</h1>
-<table>
-  <tr>
-    <th>Dia da semana</th>
-    <th>Horário</th>
-    <th>Nome da disciplina</th>
-  </tr>
-  <tr *ngFor="let item of manutencaoService.getList()">
-    <td>{{item.weekDay}}</td>
-    <td>{{item.time}}</td>
-    <td>{{item.name}}</td>
-    <td><input type="submit" value="Remover" (click)="manutencaoService.remove(item.id)"/></td>
-  </tr>
-</table>
-<div class="form">
-  <label>
+  <h1>Disciplinas</h1>
+  <table>
+    <tr>
+      <th> Disciplina</th>
+      <th>Dia da semana</th>
+      <th>Horário</th>
+
+    </tr>
+    <tr *ngFor="let item of manutencaoService.getList()">
+      <td>{{item.name}}</td>
+      <td>{{item.weekDay}}</td>
+      <td>{{item.time}}</td>
+
+      <td><input type="submit" value="X" class="remover" (click)="manutencaoService.remove(item.id)"/></td>
+    </tr>
+  </table>
+  <div class="form">
+    <label>
     Dia da semana:
 
     <select [(ngModel)]="inputWeekDay" required>
@@ -28,14 +30,14 @@
     </select>
 
   </label>
-  <label>
+    <label>
     Horário:
     <input type="time" [(ngModel)]="inputTime" required>
   </label>
-  <label>
+    <label>
     Nome:
     <input type="text" [(ngModel)]="inputName" required>
   </label>
-  <input type="submit" value="Adicionar" (click)="handleClick()">
-</div>
+    <input type="submit" value="Adicionar" (click)="handleClick()">
+  </div>
 </section>

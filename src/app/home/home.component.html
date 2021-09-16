@@ -1,29 +1,31 @@
-<div>
-  <h1> Perfil do aluno </h1>
-  <h2> Nome </h2>
-  <p> Isabela Baraldi Gandelman </p>
+<section>
 
-  <h2> RA </h2>
-  0050832011041
+  <div>
+    <h1> Perfil do aluno </h1>
+    <h2> Nome </h2>
+    <p> Isabela Baraldi Gandelman </p>
 
-  <h2> <a href="https://github.com/isabeela"> Perfil do Github </a> </h2>
-  
-  
-</div>
-<hr>
+    <h2> RA </h2>
+    0050832011041
 
-<div>
-  <h2> Quadro de Horários </h2>
-  <table>
-    <tr>
-      <th>Dia da semana</th>
-      <th>Horário</th>
-      <th>Nome da disciplina</th>
-    </tr>
-    <tr *ngFor="let item of manutencaoService.getList()">
-      <td>{{item.weekDay}}</td>
-      <td>{{item.time}}</td>
-      <td>{{item.name}}</td>
-    </tr>
-  </table>
-</div>
+    <h2> <a href="https://github.com/isabeela"> Perfil do Github </a> </h2>
+
+
+  </div>
+  <hr>
+  <div>
+    <h2> Quadro de Horários </h2>
+    <table>
+      <tr>
+        <th>Dia da semana</th>
+        <th>Horário</th>
+        <th>Nome da disciplina</th>
+      </tr>
+      <tr *ngFor="let item of manutencaoService.getList()">
+        <td>{{item.weekDay}}</td>
+        <td>{{item.time}}</td>
+        <td>{{item.name}}</td>
+      </tr>
+    </table>
+  </div>
+</section>
